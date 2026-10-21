@@ -3,6 +3,14 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
+configurations.all{
+    resolutionStrategy{
+        force("androidx.test.espresso:espresso-core:3.7.0")
+        force("androidx.test.ext:junit:1.3.0")
+    }
+}
+
+
 android {
     namespace = "com.example.lab_7"
     compileSdk {
